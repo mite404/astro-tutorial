@@ -1,9 +1,7 @@
 ---
-import Navigation from "../components/Navigation.astro";
 import '../styles/global.css';
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-
+import '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 
 const identity = {
@@ -45,11 +43,7 @@ const textCase = "uppercase";
         font-weight: bold;
       }
     </style>
-    
-    <Header />
-    
-    <h1>{pageTitle}</h1>
-    
+    <BaseLayout pageTitle={pageTitle} />
     <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
     
     <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
@@ -72,7 +66,6 @@ const textCase = "uppercase";
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
-    <Footer />
     <script>
       import "../scripts/menu.js";
     </script>
