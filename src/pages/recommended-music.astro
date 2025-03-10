@@ -1,34 +1,14 @@
 ---
 import '../styles/global.css';
-import Footer from "../components/Footer.astro";
-import Header from '../components/Header.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 const pageTitle = "Recommended Music"
 ---
 
-<html lang="en">
-  
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  
-  <body>
-    <Header />
-    
-    <h1>{pageTitle}</h1>
-    <ul>
-      <li><a href="https://www.youtube.com/watch?v=f6k0FlHGrZE">Mushroom Jazz 2</a></li>
-      <li><a href="https://www.youtube.com/watch?v=ZHIflZTgPn0">LTJ Bukem Presents Earth: Volume One</a></li>
-      <li><a href="https://www.youtube.com/watch?v=OTnxqXCsGjg">Cookin' Ingredients: Step One</a></li>
-    </ul>
-  <Footer />
-  <script>
-      import "../scripts/menu.js";
-  </script>
-  </body>
-
-</html>
+<BaseLayout pageTitle={pageTitle}>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=f6k0FlHGrZE">Mushroom Jazz 2</a></li>
+  <li><a href="https://www.youtube.com/watch?v=ZHIflZTgPn0">LTJ Bukem Presents Earth: Volume One</a></li>
+  <li><a href="https://www.youtube.com/watch?v=OTnxqXCsGjg">Cookin' Ingredients: Step One</a></li>
+</ul>
+</BaseLayout>
