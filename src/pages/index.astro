@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle = "Home Page"
 ---
@@ -12,12 +14,18 @@ const pageTitle = "Home Page"
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
   </head>
+  
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/recommended-music/">Music</a>
     
-    <h1>{pageTitle}</h1>
+    <Header />
+    
+    <h1>Home</h1>
+  
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis delectus dolores eum, eveniet in minima nam omnis perferendis quae sunt voluptatem, voluptates! A aspernatur assumenda dolorum fugiat, numquam sed temporibus!</p>
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
+
 </html>

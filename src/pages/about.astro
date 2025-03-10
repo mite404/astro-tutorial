@@ -1,5 +1,8 @@
 ---
+import Navigation from "../components/Navigation.astro";
 import '../styles/global.css';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 
 const pageTitle = "About Me";
 
@@ -30,27 +33,22 @@ const textCase = "uppercase";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
-    <a href="/recommended-music/">Music</a>
+    <style define:vars={{ skillColor, fontWeight, textCase }}>
   
-    <h1>{pageTitle}</h1>
-    
-    <style define:vars={{skillColor, fontWeight, textCase}}>
-      
       h1 {
         color: purple;
         font-size: 4rem;
       }
-      
+  
       .skill {
         color: var(--skillColor);
         font-weight: bold;
       }
     </style>
     
-    <h2>... and my new Astro site!</h2>
+    <Header />
+    
+    <h1>{pageTitle}</h1>
     
     <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
     
@@ -74,5 +72,10 @@ const textCase = "uppercase";
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
+  
 </html>
